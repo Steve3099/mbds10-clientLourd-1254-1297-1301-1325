@@ -1,0 +1,13 @@
+C:\ITU\M2\TPT\app\Troque\mbds10-clientLourd-1254-1297-1301-1325\Troque\bin\Debug\Troque.exe.config
+C:\ITU\M2\TPT\app\Troque\mbds10-clientLourd-1254-1297-1301-1325\Troque\bin\Debug\Troque.exe
+C:\ITU\M2\TPT\app\Troque\mbds10-clientLourd-1254-1297-1301-1325\Troque\bin\Debug\Troque.pdb
+C:\ITU\M2\TPT\app\Troque\mbds10-clientLourd-1254-1297-1301-1325\Troque\obj\Debug\Troque.csproj.AssemblyReference.cache
+C:\ITU\M2\TPT\app\Troque\mbds10-clientLourd-1254-1297-1301-1325\Troque\obj\Debug\Troque.Form1.resources
+C:\ITU\M2\TPT\app\Troque\mbds10-clientLourd-1254-1297-1301-1325\Troque\obj\Debug\Troque.Properties.Resources.resources
+C:\ITU\M2\TPT\app\Troque\mbds10-clientLourd-1254-1297-1301-1325\Troque\obj\Debug\Troque.csproj.GenerateResource.cache
+C:\ITU\M2\TPT\app\Troque\mbds10-clientLourd-1254-1297-1301-1325\Troque\obj\Debug\Troque.csproj.CoreCompileInputs.cache
+C:\ITU\M2\TPT\app\Troque\mbds10-clientLourd-1254-1297-1301-1325\Troque\obj\Debug\Troque.exe
+C:\ITU\M2\TPT\app\Troque\mbds10-clientLourd-1254-1297-1301-1325\Troque\obj\Debug\Troque.pdb
+C:\ITU\M2\TPT\app\Troque\mbds10-clientLourd-1254-1297-1301-1325\Troque\bin\Debug\Newtonsoft.Json.dll
+C:\ITU\M2\TPT\app\Troque\mbds10-clientLourd-1254-1297-1301-1325\Troque\bin\Debug\Newtonsoft.Json.xml
+C:\ITU\M2\TPT\app\Troque\mbds10-clientLourd-1254-1297-1301-1325\Troque\obj\Debug\Troque.csproj.Up2Date
