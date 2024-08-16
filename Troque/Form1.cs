@@ -33,11 +33,11 @@ namespace Troque
             User success = await auth.Login(email, password);
             if (success != null)
             {
-                AuthTokenManager.Instance.AccessToken = success.Password;
+                //AuthTokenManager.AccessToken = success.Password;
                 this.Hide();
                 Dashboard dashboard = new Dashboard();
                 dashboard.ShowDialog();
-                MessageBox.Show("Login success");
+                //MessageBox.Show("Login success");
             }
             else
             {

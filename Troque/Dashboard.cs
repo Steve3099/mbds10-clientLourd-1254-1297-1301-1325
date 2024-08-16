@@ -16,5 +16,11 @@ namespace Troque
         {
             InitializeComponent();
         }
+
+        private void btAddProduct_Click(object sender, EventArgs e)
+        {
+            AjoutProduit ajoutProduit = new AjoutProduit();
+            ajoutProduit.ShowDialog();
+        }
     }
 }

@@ -39,6 +39,7 @@
             this.btAddProduct.TabIndex = 0;
             this.btAddProduct.Text = "button1";
             this.btAddProduct.UseVisualStyleBackColor = true;
+            this.btAddProduct.Click += new System.EventHandler(this.btAddProduct_Click);
             // 
             // Dashboard
             // 

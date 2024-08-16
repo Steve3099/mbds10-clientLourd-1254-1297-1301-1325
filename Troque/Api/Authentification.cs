@@ -59,11 +59,13 @@ namespace Troque.Api
 
                 // Optionally, handle the response content here (e.g., JWT token, user data)
                 var responseContent = await response.Content.ReadAsStringAsync();
-                Console.WriteLine(responseContent);
+                
                 var loginResponse = JsonConvert.DeserializeObject<LoginResponse>(responseContent);
                 string accessToken = loginResponse.Data.AccessToken;
-                AuthTokenManager.Instance.AccessToken = loginResponse.Data.AccessToken;
+                AuthTokenManager.AccessToken = loginResponse.Data.AccessToken;
+                Console.WriteLine(AuthTokenManager.AccessToken);
                 User user = loginResponse.Data.User;
+                AuthTokenManager.id = user.Id;
                 return user;
             }
             catch (HttpRequestException ex)
