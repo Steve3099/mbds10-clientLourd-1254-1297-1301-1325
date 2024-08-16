@@ -11,3 +11,4 @@ C:\ITU\M2\TPT\app\Troque\mbds10-clientLourd-1254-1297-1301-1325\Troque\obj\Debug
 C:\ITU\M2\TPT\app\Troque\mbds10-clientLourd-1254-1297-1301-1325\Troque\bin\Debug\Newtonsoft.Json.dll
 C:\ITU\M2\TPT\app\Troque\mbds10-clientLourd-1254-1297-1301-1325\Troque\bin\Debug\Newtonsoft.Json.xml
 C:\ITU\M2\TPT\app\Troque\mbds10-clientLourd-1254-1297-1301-1325\Troque\obj\Debug\Troque.csproj.Up2Date
+C:\ITU\M2\TPT\app\Troque\mbds10-clientLourd-1254-1297-1301-1325\Troque\obj\Debug\Troque.Inscription.resources

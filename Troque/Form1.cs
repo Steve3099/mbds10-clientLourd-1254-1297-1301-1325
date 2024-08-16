@@ -8,6 +8,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Troque.Model;
 
 namespace Troque
 {
@@ -29,8 +30,31 @@ namespace Troque
             string password = this.textBoxPassword.Text;
 
             var auth = new Api.Authentification();
-            bool success = await auth.Login(email, password);
+            User success = await auth.Login(email, password);
+            if (success != null)
+            {
+                AuthTokenManager.Instance.AccessToken = success.Password;
+                this.Hide();
+                Dashboard dashboard = new Dashboard();
+                dashboard.ShowDialog();
+                MessageBox.Show("Login success");
+            }
+            else
+            {
+                MessageBox.Show("Login failed");
+            }
             Console.Write(success);
+        }
+
+        private void inscription_Click(object sender, EventArgs e)
+        {
+            Inscription inscription = new Inscription();
+            inscription.ShowDialog();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

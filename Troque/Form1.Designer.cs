@@ -70,6 +70,7 @@
             this.inscription.TabIndex = 3;
             this.inscription.Text = "s\'inscrire";
             this.inscription.UseVisualStyleBackColor = true;
+            this.inscription.Click += new System.EventHandler(this.inscription_Click);
             // 
             // groupBoxLogin
             // 
@@ -91,7 +92,8 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBoxLogin);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Login";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBoxLogin.ResumeLayout(false);
             this.groupBoxLogin.PerformLayout();
             this.ResumeLayout(false);

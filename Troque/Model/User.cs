@@ -15,7 +15,7 @@ namespace Troque.Model
         public string Email { get; set; }
         public string Password { get; set; }
         public int Role_id { get; set; }
-        public Role Role { get; set; }
+        public string Role { get; set; }
         public string user_image { get; set; }
         public Boolean is_active { get; set; }
         public DateTime creation_date { get; set; }
@@ -26,7 +26,7 @@ namespace Troque.Model
         {
         }
 
-        public User(int id, string username, string name, string address, string email, string password, int role_id, Role role, string user_image, Boolean is_active, DateTime creation_date, DateTime deleted_at)
+        public User(int id, string username, string name, string address, string email, string password, int role_id, string role, string user_image, Boolean is_active, DateTime creation_date, DateTime deleted_at)
         {
             Id = id;
             Username = username;
