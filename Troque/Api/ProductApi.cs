@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
@@ -10,6 +11,20 @@ using Troque.Model;
 
 namespace Troque.Api
 {
+    public class ProductResponse
+    {
+        [JsonProperty("code")]
+        public int Code { get; set; }
+
+        [JsonProperty("status")]
+        public string Status { get; set; }
+
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("data")]
+        public List<Product> Data { get; set; }
+    }
     public class ProductApi
     {
         private static readonly HttpClient client = new HttpClient();
@@ -37,8 +52,13 @@ namespace Troque.Api
                 {
                     throw new InvalidOperationException("Access token is missing.");
                 }
+                Console.WriteLine(accessToken);
+                client.DefaultRequestHeaders.Clear();
                 client.DefaultRequestHeaders.Add("x-auth-token", accessToken);
                 HttpResponseMessage response = await client.PostAsync(baseUrl + "/products", data);
+                string responseContent = await response.Content.ReadAsStringAsync();
+                Console.WriteLine($"Response: StatusCode: {response.StatusCode}, Content: {responseContent}");
+
                 response.EnsureSuccessStatusCode();
                 Console.WriteLine(response);
                 return true;
@@ -60,6 +80,7 @@ namespace Troque.Api
                 {
                     throw new InvalidOperationException("Access token is missing.");
                 }
+                client.DefaultRequestHeaders.Clear();
                 client.DefaultRequestHeaders.Add("x-auth-token", accessToken);
                 HttpResponseMessage response = await client.GetAsync(baseUrl + "/products/" + id);
                 response.EnsureSuccessStatusCode();
@@ -74,5 +95,55 @@ namespace Troque.Api
             }
         }
 
+        public async Task<List<Product>> GetProducts()
+        {
+            try
+            {
+                string baseUrl = ConfigurationManager.AppSettings["ApiBaseUrl"];
+                string accessToken = AuthTokenManager.AccessToken;
+                if (string.IsNullOrEmpty(accessToken))
+                {
+                    throw new InvalidOperationException("Access token is missing.");
+                }
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Add("x-auth-token", accessToken);
+                HttpResponseMessage response = await client.GetAsync(baseUrl + "/products");
+                response.EnsureSuccessStatusCode();
+                var responseContent = await response.Content.ReadAsStringAsync();
+                var products = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Product>>(responseContent);
+                return products;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return null;
+            }
+        }
+
+        public async Task<List<Product>> GetProductsUser(int id)
+        {
+            try
+            {
+                string baseUrl = ConfigurationManager.AppSettings["ApiBaseUrl"];
+                string accessToken = AuthTokenManager.AccessToken;
+                if (string.IsNullOrEmpty(accessToken))
+                {
+                    throw new InvalidOperationException("Access token is missing.");
+                }
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Add("x-auth-token", accessToken);
+                HttpResponseMessage response = await client.GetAsync(baseUrl + "/products?userId=" + id);
+                response.EnsureSuccessStatusCode();
+                var responseContent = await response.Content.ReadAsStringAsync();
+                var products = Newtonsoft.Json.JsonConvert.DeserializeObject<ProductResponse>(responseContent);
+                Console.WriteLine(products.Data);
+                return products.Data;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return null;
+            }
+        }
     }
 }

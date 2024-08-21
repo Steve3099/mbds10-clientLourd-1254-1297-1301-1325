@@ -33,6 +33,7 @@ namespace Troque
             {
 
                 this.comboBoxCategory.Items.Add(category.Category_name);
+                
             }
         }
         
@@ -69,6 +70,7 @@ namespace Troque
             if (result)
             {
                 MessageBox.Show("Product added successfully");
+                this.Close();
             }
             else
             {

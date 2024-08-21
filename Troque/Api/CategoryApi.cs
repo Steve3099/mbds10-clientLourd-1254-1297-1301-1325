@@ -44,6 +44,7 @@ namespace Troque.Api
                 // Add the Authorization header with the Bearer token
                 //client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("x-auth-token", accessToken);
                 //client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
+                client.DefaultRequestHeaders.Clear();
                 client.DefaultRequestHeaders.Add("x-auth-token", accessToken);
                
                 HttpResponseMessage response = await client.GetAsync(baseUrl + "/categories");

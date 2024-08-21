@@ -9,6 +9,8 @@ namespace Troque.Model
     public class Produit_Category
     {
         public int Id { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
         public int Product_id { get; set; }
         public Product Product { get; set; }
         public int Category_id { get; set; }

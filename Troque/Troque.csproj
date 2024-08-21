@@ -100,11 +100,29 @@
     <Compile Include="Api\Authentification.cs" />
     <Compile Include="Api\CategoryApi.cs" />
     <Compile Include="Api\ProductApi.cs" />
+    <Compile Include="CardProduit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CardProduit.Designer.cs">
+      <DependentUpon>CardProduit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateEchange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateEchange.Designer.cs">
+      <DependentUpon>CreateEchange.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FicheProduit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FicheProduit.Designer.cs">
+      <DependentUpon>FicheProduit.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -132,8 +150,17 @@
     <EmbeddedResource Include="AjoutProduit.resx">
       <DependentUpon>AjoutProduit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CardProduit.resx">
+      <DependentUpon>CardProduit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateEchange.resx">
+      <DependentUpon>CreateEchange.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FicheProduit.resx">
+      <DependentUpon>FicheProduit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

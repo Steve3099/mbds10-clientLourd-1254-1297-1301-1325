@@ -53,6 +53,7 @@ namespace Troque.Api
 
             try
             {
+                client.DefaultRequestHeaders.Clear();
                 string baseUrl = ConfigurationManager.AppSettings["ApiBaseUrl"];
                 HttpResponseMessage response = await client.PostAsync(baseUrl+ "/auth/login", data);
                 response.EnsureSuccessStatusCode();
