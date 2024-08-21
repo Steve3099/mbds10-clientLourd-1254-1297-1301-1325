@@ -18,6 +18,16 @@ namespace Troque
             InitializeComponent();
         }
 
+        public void setButtonVisibility(bool visible)
+        {
+            Details.Visible = visible;
+        }
+
+        public void setCheckBoxVisibility(bool visible)
+        {
+            checkBox1.Visible = visible;
+        }
+
         
         private void label3_Click(object sender, EventArgs e)
         {
@@ -80,6 +90,7 @@ namespace Troque
             _imageUrl = imageUrl;
             await LoadImageAsync(_imageUrl);
         }
+        
 
         public async Task LoadImageAsync(string imageUrl)
         {

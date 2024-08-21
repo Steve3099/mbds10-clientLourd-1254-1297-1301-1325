@@ -44,6 +44,7 @@ namespace Troque
                 cardProduit.idProduit = product.id;
                 cardProduit.nomProduit = product.product_name;
                 cardProduit.description = product.description;
+                cardProduit.setCheckBoxVisibility(false);
                 await cardProduit.SetImageUrlAsync(product.product_image);
                 foreach (Category category in product.categories)
                 {
