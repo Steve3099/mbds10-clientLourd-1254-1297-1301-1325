@@ -26,6 +26,21 @@ namespace Troque.Api
         [JsonProperty("data")]
         public Exchange Data { get; set; }
     }
+
+    public class ListExchangeResponse
+    {
+        [JsonProperty("code")]
+        public int Code { get; set; }
+
+        [JsonProperty("status")]
+        public string Status { get; set; }
+
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("data")]
+        public List<Exchange> Data { get; set; }
+    }
     public class ExchangeApi
     {
         private static readonly HttpClient client = new HttpClient();
@@ -65,6 +80,32 @@ namespace Troque.Api
 
                 response.EnsureSuccessStatusCode();
                 var products = Newtonsoft.Json.JsonConvert.DeserializeObject<ExchangeResponse>(responseContent);
+                return products.Data;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return null;
+            }
+        }
+
+        public async Task<List<Exchange>> GetMyExchange()
+        {
+            try
+            {
+                string baseUrl = ConfigurationManager.AppSettings["ApiBaseUrl"];
+                string accessToken = AuthTokenManager.AccessToken;
+                if (string.IsNullOrEmpty(accessToken))
+                {
+                    throw new InvalidOperationException("Access token is missing.");
+                }
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Add("x-auth-token", accessToken);
+                HttpResponseMessage response = await client.GetAsync(baseUrl + "/exchanges");
+                string responseContent = await response.Content.ReadAsStringAsync();
+
+                response.EnsureSuccessStatusCode();
+                var products = Newtonsoft.Json.JsonConvert.DeserializeObject<ListExchangeResponse>(responseContent);
                 return products.Data;
             }
             catch (Exception e)

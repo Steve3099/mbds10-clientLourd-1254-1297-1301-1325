@@ -119,6 +119,12 @@
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="EchangeCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EchangeCard.Designer.cs">
+      <DependentUpon>EchangeCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="FicheProduit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,12 @@
     </Compile>
     <Compile Include="Inscription.Designer.cs">
       <DependentUpon>Inscription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListExchange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListExchange.Designer.cs">
+      <DependentUpon>ListExchange.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\AuthTokenManager.cs" />
     <Compile Include="Model\Category.cs" />
@@ -160,6 +172,9 @@
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EchangeCard.resx">
+      <DependentUpon>EchangeCard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FicheProduit.resx">
       <DependentUpon>FicheProduit.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inscription.resx">
       <DependentUpon>Inscription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListExchange.resx">
+      <DependentUpon>ListExchange.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -32,7 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.cardProduit1 = new Troque.CardProduit();
+            this.listeEchangebutton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,6 +48,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.listeEchangebutton);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -74,17 +75,15 @@
             this.flowLayoutPanel1.TabIndex = 1;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
-            // cardProduit1
+            // listeEchangebutton
             // 
-            this.cardProduit1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.cardProduit1.categorie = "categories";
-            this.cardProduit1.description = "description";
-            this.cardProduit1.ImageUrl = null;
-            this.cardProduit1.Location = new System.Drawing.Point(0, 0);
-            this.cardProduit1.Name = "cardProduit1";
-            this.cardProduit1.nomProduit = "titre";
-            this.cardProduit1.Size = new System.Drawing.Size(651, 124);
-            this.cardProduit1.TabIndex = 0;
+            this.listeEchangebutton.Location = new System.Drawing.Point(39, 109);
+            this.listeEchangebutton.Name = "listeEchangebutton";
+            this.listeEchangebutton.Size = new System.Drawing.Size(155, 51);
+            this.listeEchangebutton.TabIndex = 1;
+            this.listeEchangebutton.Text = "Liste de mes echanges ";
+            this.listeEchangebutton.UseVisualStyleBackColor = true;
+            this.listeEchangebutton.Click += new System.EventHandler(this.listeEchangebutton_Click);
             // 
             // Dashboard
             // 
@@ -109,5 +108,6 @@
         private CardProduit cardProduit1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button listeEchangebutton;
     }
 }

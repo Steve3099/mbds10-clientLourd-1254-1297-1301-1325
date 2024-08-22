@@ -11,9 +11,10 @@ namespace Troque.Model
         public int Id { get; set; }
         public int User_id { get; set; }
         public User User { get; set; }
-        public DateTime Creation_date { get; set; }
-        public DateTime Updating_date { get; set; }
+        public DateTime createdAt { get; set; }
+        public DateTime updatedAt { get; set; }
         public bool Is_active { get; set; }
+        public List<Product> Products { get; set; }
 
         public Proposition()
         {
@@ -23,8 +24,8 @@ namespace Troque.Model
         {
             Id = id;
             User_id = user_id;
-            Creation_date = creation_date;
-            Updating_date = updating_date;
+            createdAt = creation_date;
+            updatedAt = updating_date;
             Is_active = is_active;
         }
         

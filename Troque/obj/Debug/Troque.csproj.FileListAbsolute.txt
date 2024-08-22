@@ -17,3 +17,5 @@ C:\ITU\M2\TPT\app\Troque\mbds10-clientLourd-1254-1297-1301-1325\Troque\obj\Debug
 C:\ITU\M2\TPT\app\Troque\mbds10-clientLourd-1254-1297-1301-1325\Troque\obj\Debug\Troque.CardProduit.resources
 C:\ITU\M2\TPT\app\Troque\mbds10-clientLourd-1254-1297-1301-1325\Troque\obj\Debug\Troque.FicheProduit.resources
 C:\ITU\M2\TPT\app\Troque\mbds10-clientLourd-1254-1297-1301-1325\Troque\obj\Debug\Troque.CreateEchange.resources
+C:\ITU\M2\TPT\app\Troque\mbds10-clientLourd-1254-1297-1301-1325\Troque\obj\Debug\Troque.EchangeCard.resources
+C:\ITU\M2\TPT\app\Troque\mbds10-clientLourd-1254-1297-1301-1325\Troque\obj\Debug\Troque.ListExchange.resources

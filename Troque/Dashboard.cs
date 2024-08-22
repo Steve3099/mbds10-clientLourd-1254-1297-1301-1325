@@ -35,7 +35,6 @@ namespace Troque
             //List<Model.Product> products = produitapi.GetProducts();
             int userId = AuthTokenManager.id;
             this.Products = await produitapi.GetAllProductsUser();
-            CardProduit[] listecardProduits = new CardProduit[10];
             //listView1.Controls.Clear();
 
             foreach (Product product in Products)
@@ -94,6 +93,12 @@ namespace Troque
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void listeEchangebutton_Click(object sender, EventArgs e)
+        {
+            ListExchange listExchange = new ListExchange();
+            listExchange.ShowDialog();
         }
     }
 }
