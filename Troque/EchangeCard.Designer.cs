@@ -145,7 +145,7 @@
             // 
             this.buttonrecevoir.BackColor = System.Drawing.Color.DodgerBlue;
             this.buttonrecevoir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonrecevoir.Location = new System.Drawing.Point(575, 354);
+            this.buttonrecevoir.Location = new System.Drawing.Point(574, 347);
             this.buttonrecevoir.Name = "buttonrecevoir";
             this.buttonrecevoir.Size = new System.Drawing.Size(166, 31);
             this.buttonrecevoir.TabIndex = 5;
@@ -160,7 +160,6 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.MediumAquamarine;
             this.Controls.Add(this.buttonrecevoir);
-            this.Controls.Add(this.buttonReceived);
             this.Controls.Add(this.Status);
             this.Controls.Add(this.buttonRefuser);
             this.Controls.Add(this.buttonAccepter);

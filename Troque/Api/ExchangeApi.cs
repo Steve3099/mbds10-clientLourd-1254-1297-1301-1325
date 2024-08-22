@@ -148,14 +148,14 @@ namespace Troque.Api
             try
             {
 
-                var (latitude, longitude) = (10,10);
+                var (latitude, longitude) = (10.5,10.4);
 
                 // Set up the request body with location data
                 var locationData = new
                 {
                     accept = true,
-                    longitude= latitude,
-                    latitude= longitude
+                    longitude= longitude,
+                    latitude= latitude
                 };
                 var json = JsonConvert.SerializeObject(locationData);
                 var data = new StringContent(json, Encoding.UTF8, "application/json");
@@ -167,9 +167,9 @@ namespace Troque.Api
                 }
                 client.DefaultRequestHeaders.Clear();
                 client.DefaultRequestHeaders.Add("x-auth-token", accessToken);
-                HttpResponseMessage response = await client.PostAsync(baseUrl + "/exchanges/" + id + "/receive", null);
+                HttpResponseMessage response = await client.PutAsync(baseUrl + "/exchanges/" + id + "/receive", data);
                 string responseContent = await response.Content.ReadAsStringAsync();
-
+                Console.WriteLine(responseContent);
                 response.EnsureSuccessStatusCode();
                 MessageBox.Show("Echange reçu avec succès");
                 return true;

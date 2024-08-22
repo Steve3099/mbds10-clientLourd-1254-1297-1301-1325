@@ -33,15 +33,20 @@ namespace Troque
         {
             //show status of exchange
             this.Status.Text = exchange.status;
-            this.buttonReceived.Visible = false;
+            this.buttonrecevoir.Visible = false;
             if (exchange.status == "ACCEPTED")
             {
                 this.Status.ForeColor = Color.Green;
-                this.buttonReceived.Visible = true;
+                this.buttonrecevoir.Visible = true;
             }
             else if (exchange.status == "CANCELLED")
             {
                 this.Status.ForeColor = Color.Red;
+            }
+            else if (exchange.status != "ACCEPTED")
+            {
+                this.Status.ForeColor = Color.Blue;
+                this.buttonrecevoir.Visible = false;
             }
             else
             {
