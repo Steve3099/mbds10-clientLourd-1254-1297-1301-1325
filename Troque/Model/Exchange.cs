@@ -18,6 +18,7 @@ namespace Troque.Model
         public DateTime creation_date { get; set; }
         public DateTime updating_date { get; set; }
         public string delivery_address { get; set; }
+        public string matchType { get; set; }
 
         public Exchange()
         {

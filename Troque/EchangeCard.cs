@@ -29,6 +29,15 @@ namespace Troque
 
         public Exchange exchange { get; set; }
 
+        private void controlOwnership()
+        {
+            if(this.exchange.matchType == "OWNER")
+            {
+                this.buttonAccepter.Visible = false;
+                this.buttonRefuser.Visible = false;
+            }
+        }
+
         private void EchangeCard_Load(object sender, EventArgs e)
         {
             //show status of exchange
@@ -52,6 +61,7 @@ namespace Troque
             {
                 this.Status.ForeColor = Color.Blue;
             }
+            controlOwnership();
             //owner propositon
             this.owner.Text = exchange.owner_proposition.User.Username;
             List<Product> listOwner = new List<Product>();
@@ -102,6 +112,16 @@ namespace Troque
                 {
                     ListExchange parentForm = this.FindForm() as ListExchange;
                     parentForm?.RefreshExchanges();
+                    Rating rating = new Rating();
+                    if(exchange.taker_proposition.User.Id == AuthTokenManager.id)
+                    {
+                        rating.userId = exchange.owner_proposition.User.Id;
+                    }
+                    else
+                    {
+                        rating.userId = exchange.taker_proposition.User.Id;
+                    }
+                    rating.ShowDialog();
                 }
             }
             catch(Exception ex)
