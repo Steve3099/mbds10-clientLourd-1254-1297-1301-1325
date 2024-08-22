@@ -41,5 +41,11 @@ namespace Troque
             }
             //this.flowLayoutPanel1.Controls.Add()
         }
+
+        public void RefreshExchanges()
+        {
+            flowLayoutPanel1.Controls.Clear(); // Clear existing controls
+            ListExchange_Load(this, EventArgs.Empty); // Reload the exchanges
+        }
     }
 }

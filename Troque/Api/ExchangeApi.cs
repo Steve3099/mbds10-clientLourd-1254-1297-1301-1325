@@ -114,5 +114,74 @@ namespace Troque.Api
                 return null;
             }
         }
+
+        //accepter exchange
+        public async Task<bool> AcceptExchange(int id)
+        {
+            try
+            {
+                string baseUrl = ConfigurationManager.AppSettings["ApiBaseUrl"];
+                string accessToken = AuthTokenManager.AccessToken;
+                if (string.IsNullOrEmpty(accessToken))
+                {
+                    throw new InvalidOperationException("Access token is missing.");
+                }
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Add("x-auth-token", accessToken);
+                HttpResponseMessage response = await client.PostAsync(baseUrl + "/exchanges/" + id + "/accept", null);
+                string responseContent = await response.Content.ReadAsStringAsync();
+
+                response.EnsureSuccessStatusCode();
+                MessageBox.Show("Echange accepté avec succès");
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return false;
+            }
+        }
+
+        // recevoir exchange
+        public async Task<bool> ReceiveExchange(int id)
+        {
+            try
+            {
+
+                var (latitude, longitude) = (10,10);
+
+                // Set up the request body with location data
+                var locationData = new
+                {
+                    accept = true,
+                    longitude= latitude,
+                    latitude= longitude
+                };
+                var json = JsonConvert.SerializeObject(locationData);
+                var data = new StringContent(json, Encoding.UTF8, "application/json");
+                string baseUrl = ConfigurationManager.AppSettings["ApiBaseUrl"];
+                string accessToken = AuthTokenManager.AccessToken;
+                if (string.IsNullOrEmpty(accessToken))
+                {
+                    throw new InvalidOperationException("Access token is missing.");
+                }
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Add("x-auth-token", accessToken);
+                HttpResponseMessage response = await client.PostAsync(baseUrl + "/exchanges/" + id + "/receive", null);
+                string responseContent = await response.Content.ReadAsStringAsync();
+
+                response.EnsureSuccessStatusCode();
+                MessageBox.Show("Echange reçu avec succès");
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return false;
+            }
+        }
+
+
+
     }
 }
