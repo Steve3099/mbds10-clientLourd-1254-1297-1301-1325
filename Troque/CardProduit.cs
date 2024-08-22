@@ -56,6 +56,7 @@ namespace Troque
         }
 
         public int idProduit { get; set; }
+        public int userId { get; set; }
 
         public string nomProduit
         {
@@ -115,7 +116,7 @@ namespace Troque
 
         private void Details_Click(object sender, EventArgs e)
         {
-            CreateEchange createEchange = new CreateEchange();
+            CreateEchange createEchange = new CreateEchange(this.userId);
             createEchange.ShowDialog();
         }
 
