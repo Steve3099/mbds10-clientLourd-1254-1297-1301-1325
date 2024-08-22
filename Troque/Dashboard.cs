@@ -34,12 +34,13 @@ namespace Troque
 
             //List<Model.Product> products = produitapi.GetProducts();
             int userId = AuthTokenManager.id;
-            this.Products = await produitapi.GetProductsUser(userId);
+            this.Products = await produitapi.GetAllProductsUser();
             CardProduit[] listecardProduits = new CardProduit[10];
             //listView1.Controls.Clear();
 
             foreach (Product product in Products)
             {
+                Console.WriteLine(product.id);
                 CardProduit cardProduit = new CardProduit();
                 cardProduit.idProduit = product.id;
                 cardProduit.nomProduit = product.product_name;

@@ -99,6 +99,7 @@
     </Compile>
     <Compile Include="Api\Authentification.cs" />
     <Compile Include="Api\CategoryApi.cs" />
+    <Compile Include="Api\ExchangeApi.cs" />
     <Compile Include="Api\ProductApi.cs" />
     <Compile Include="CardProduit.cs">
       <SubType>UserControl</SubType>

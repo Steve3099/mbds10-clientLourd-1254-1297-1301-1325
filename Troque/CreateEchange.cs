@@ -46,6 +46,7 @@ namespace Troque
             foreach (Product product in MyProducts)
             {
                 CardProduit cardProduit = new CardProduit();
+                cardProduit.idProduit = product.id;
                 cardProduit.nomProduit = product.product_name;
                 cardProduit.description = product.description;
                 cardProduit.setButtonVisibility(false);
@@ -70,6 +71,7 @@ namespace Troque
             foreach (Product product in HisProducts)
             {
                 CardProduit cardProduit = new CardProduit();
+                cardProduit.idProduit = product.id;
                 cardProduit.nomProduit = product.product_name;
                 cardProduit.description = product.description;
                 cardProduit.setButtonVisibility(false);
@@ -80,6 +82,69 @@ namespace Troque
                 }
                 flowLayoutPanelHe.Controls.Add(cardProduit);
             }
+        }
+
+        private async void button1_Click(object sender, EventArgs e)
+        {
+            List<int> myProducts = new List<int>();
+            List<int> hisProducts = new List<int>();
+            foreach (CardProduit cardProduit in flowLayoutPanelMe.Controls)
+            {
+                if (cardProduit.checkBox1.Checked)
+                {
+                    myProducts.Add(cardProduit.idProduit);
+                }
+            }
+            foreach (CardProduit cardProduit in flowLayoutPanelHe.Controls)
+            {
+                if (cardProduit.checkBox1.Checked)
+                {
+                    hisProducts.Add(cardProduit.idProduit);
+                }
+            }
+            if (myProducts.Count == 0 || hisProducts.Count == 0)
+            {
+                MessageBox.Show("Veuillez selectionner au moins un produit de chaque liste");
+                return;
+            }
+            string deliveryadress = this.Deliveryaddress.Text;
+            //verif delivery adress
+            if (deliveryadress == "")
+            {
+                MessageBox.Show("Veuillez renseigner une adresse de livraison");
+                return;
+            }
+            try
+            {
+                ExchangeApi exchangeApi = new ExchangeApi();
+                Exchange result = await exchangeApi.Exchangeproduit(deliveryadress, myProducts, hisProducts, AuthTokenManager.id, this.idOtherUser);
+                if (result != null)
+                {
+                    MessageBox.Show("Echange effectué avec succès");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Erreur lors de l'échange");
+                }
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+            
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

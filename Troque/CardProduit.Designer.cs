@@ -35,11 +35,11 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pictureBoxImage = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.Details = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Details = new System.Windows.Forms.Button();
+            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -105,6 +105,17 @@
             this.panel1.Size = new System.Drawing.Size(153, 149);
             this.panel1.TabIndex = 4;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.BackColor = System.Drawing.Color.Honeydew;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(15, 20);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(18, 25);
+            this.checkBox1.TabIndex = 6;
+            this.checkBox1.UseVisualStyleBackColor = false;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -118,16 +129,6 @@
             this.panel2.Size = new System.Drawing.Size(557, 121);
             this.panel2.TabIndex = 5;
             // 
-            // Details
-            // 
-            this.Details.Location = new System.Drawing.Point(468, 68);
-            this.Details.Name = "Details";
-            this.Details.Size = new System.Drawing.Size(75, 42);
-            this.Details.TabIndex = 6;
-            this.Details.Text = "+ de produits";
-            this.Details.UseVisualStyleBackColor = true;
-            this.Details.Click += new System.EventHandler(this.Details_Click);
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(395, 68);
@@ -137,16 +138,15 @@
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // Details
             // 
-            this.checkBox1.BackColor = System.Drawing.Color.Honeydew;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(15, 20);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(18, 25);
-            this.checkBox1.TabIndex = 6;
-            this.checkBox1.UseVisualStyleBackColor = false;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.Details.Location = new System.Drawing.Point(468, 68);
+            this.Details.Name = "Details";
+            this.Details.Size = new System.Drawing.Size(75, 42);
+            this.Details.TabIndex = 6;
+            this.Details.Text = "+ de produits";
+            this.Details.UseVisualStyleBackColor = true;
+            this.Details.Click += new System.EventHandler(this.Details_Click);
             // 
             // CardProduit
             // 
@@ -177,6 +177,6 @@
         private System.Windows.Forms.Button Details;
         private System.Windows.Forms.Button button1;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        public System.Windows.Forms.CheckBox checkBox1;
     }
 }

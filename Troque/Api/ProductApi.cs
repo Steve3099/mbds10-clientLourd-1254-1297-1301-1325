@@ -31,8 +31,6 @@ namespace Troque.Api
 
         public async Task<bool> AddProduct(string product_name, string description, List<int> categ)
         {
-            Console.WriteLine("here");
-            Console.WriteLine(categ.ToArray()[0]);
             var productData = new
             {
                 product_name = product_name,
@@ -43,7 +41,6 @@ namespace Troque.Api
             var json = Newtonsoft.Json.JsonConvert.SerializeObject(productData);
             var data = new StringContent(json, Encoding.UTF8, "application/json");
             string contentString = await data.ReadAsStringAsync();
-            Console.WriteLine(contentString);
             try
             {
                 string baseUrl = ConfigurationManager.AppSettings["ApiBaseUrl"];
@@ -52,15 +49,12 @@ namespace Troque.Api
                 {
                     throw new InvalidOperationException("Access token is missing.");
                 }
-                Console.WriteLine(accessToken);
                 client.DefaultRequestHeaders.Clear();
                 client.DefaultRequestHeaders.Add("x-auth-token", accessToken);
                 HttpResponseMessage response = await client.PostAsync(baseUrl + "/products", data);
                 string responseContent = await response.Content.ReadAsStringAsync();
-                Console.WriteLine($"Response: StatusCode: {response.StatusCode}, Content: {responseContent}");
 
                 response.EnsureSuccessStatusCode();
-                Console.WriteLine(response);
                 return true;
             }
             catch (Exception e)
@@ -136,7 +130,31 @@ namespace Troque.Api
                 response.EnsureSuccessStatusCode();
                 var responseContent = await response.Content.ReadAsStringAsync();
                 var products = Newtonsoft.Json.JsonConvert.DeserializeObject<ProductResponse>(responseContent);
-                Console.WriteLine(products.Data);
+                return products.Data;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return null;
+            }
+        }
+
+        public async Task<List<Product>> GetAllProductsUser()
+        {
+            try
+            {
+                string baseUrl = ConfigurationManager.AppSettings["ApiBaseUrl"];
+                string accessToken = AuthTokenManager.AccessToken;
+                if (string.IsNullOrEmpty(accessToken))
+                {
+                    throw new InvalidOperationException("Access token is missing.");
+                }
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Add("x-auth-token", accessToken);
+                HttpResponseMessage response = await client.GetAsync(baseUrl + "/products");
+                response.EnsureSuccessStatusCode();
+                var responseContent = await response.Content.ReadAsStringAsync();
+                var products = Newtonsoft.Json.JsonConvert.DeserializeObject<ProductResponse>(responseContent);
                 return products.Data;
             }
             catch (Exception e)
