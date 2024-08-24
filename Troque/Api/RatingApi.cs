@@ -40,6 +40,7 @@ namespace Troque.Api
                 string responseContent = await response.Content.ReadAsStringAsync();
 
                 response.EnsureSuccessStatusCode();
+                Console.WriteLine(responseContent);
                 return true;
             }
             catch (Exception e)

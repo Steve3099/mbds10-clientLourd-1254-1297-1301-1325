@@ -20,7 +20,7 @@ namespace Troque
 
         public int userId { get; set; }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
             string desc = this.Commentaire.Text;
             double rating = this.ratingControl1.Value;
@@ -31,7 +31,15 @@ namespace Troque
                 return;
             }
             RatingApi ratingApi = new RatingApi();
-            ratingApi.sendRating(userId, desc, rating);
+            bool result = await ratingApi.sendRating(userId, desc, rating);
+            //verif result
+            if (result)
+            {
+                MessageBox.Show("Votre avis a été enregistré");
+            }
+            else {      
+                MessageBox.Show("Erreur lors de l'enregistrement de votre avis");
+            }
             this.Close();
 
         }

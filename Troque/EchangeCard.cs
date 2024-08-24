@@ -112,16 +112,7 @@ namespace Troque
                 {
                     ListExchange parentForm = this.FindForm() as ListExchange;
                     parentForm?.RefreshExchanges();
-                    Rating rating = new Rating();
-                    if(exchange.taker_proposition.User.Id == AuthTokenManager.id)
-                    {
-                        rating.userId = exchange.owner_proposition.User.Id;
-                    }
-                    else
-                    {
-                        rating.userId = exchange.taker_proposition.User.Id;
-                    }
-                    rating.ShowDialog();
+                    
                 }
             }
             catch(Exception ex)
@@ -154,6 +145,17 @@ namespace Troque
                 var res = await exchangeApi.ReceiveExchange(exchange.id);
                 if (res == true)
                 {
+
+                    Rating rating = new Rating();
+                    if (exchange.taker_proposition.User.Id == AuthTokenManager.id)
+                    {
+                        rating.userId = exchange.owner_proposition.User.Id;
+                    }
+                    else
+                    {
+                        rating.userId = exchange.taker_proposition.User.Id;
+                    }
+                    rating.ShowDialog();
                     ListExchange parentForm = this.FindForm() as ListExchange;
                     parentForm?.RefreshExchanges();
                 }

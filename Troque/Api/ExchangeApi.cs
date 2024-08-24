@@ -169,7 +169,6 @@ namespace Troque.Api
                 client.DefaultRequestHeaders.Add("x-auth-token", accessToken);
                 HttpResponseMessage response = await client.PutAsync(baseUrl + "/exchanges/" + id + "/receive", data);
                 string responseContent = await response.Content.ReadAsStringAsync();
-                Console.WriteLine(responseContent);
                 response.EnsureSuccessStatusCode();
                 MessageBox.Show("Echange reçu avec succès");
                 return true;

@@ -3,51 +3,67 @@
   "WorkspaceRootPath": "C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\api\\ratingapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|solutionrelative:api\\ratingapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|c:\\itu\\m2\\tpt\\app\\troque\\mbds10-clientlourd-1254-1297-1301-1325\\troque\\rating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|solutionrelative:rating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|c:\\itu\\m2\\tpt\\app\\troque\\mbds10-clientlourd-1254-1297-1301-1325\\troque\\api\\ratingapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|solutionrelative:api\\ratingapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|c:\\itu\\m2\\tpt\\app\\troque\\mbds10-clientlourd-1254-1297-1301-1325\\troque\\api\\productapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|solutionrelative:api\\productapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|c:\\itu\\m2\\tpt\\app\\troque\\mbds10-clientlourd-1254-1297-1301-1325\\troque\\rating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\rating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|solutionrelative:rating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|c:\\itu\\m2\\tpt\\app\\troque\\mbds10-clientlourd-1254-1297-1301-1325\\troque\\echangecard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\echangecard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|solutionrelative:echangecard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|c:\\itu\\m2\\tpt\\app\\troque\\mbds10-clientlourd-1254-1297-1301-1325\\troque\\api\\exchangeapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|solutionrelative:api\\exchangeapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\echangecard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|solutionrelative:echangecard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|c:\\itu\\m2\\tpt\\app\\troque\\mbds10-clientlourd-1254-1297-1301-1325\\troque\\api\\authentification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|solutionrelative:api\\authentification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\api\\exchangeapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|solutionrelative:api\\exchangeapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\listexchange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|solutionrelative:listexchange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|c:\\itu\\m2\\tpt\\app\\troque\\mbds10-clientlourd-1254-1297-1301-1325\\troque\\echangecard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|solutionrelative:echangecard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|c:\\itu\\m2\\tpt\\app\\troque\\mbds10-clientlourd-1254-1297-1301-1325\\troque\\echangecard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\echangecard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|solutionrelative:echangecard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|c:\\itu\\m2\\tpt\\app\\troque\\mbds10-clientlourd-1254-1297-1301-1325\\troque\\echangecard.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "AbsoluteMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|c:\\itu\\m2\\tpt\\app\\troque\\mbds10-clientlourd-1254-1297-1301-1325\\troque\\createechange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|solutionrelative:createechange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|c:\\itu\\m2\\tpt\\app\\troque\\mbds10-clientlourd-1254-1297-1301-1325\\troque\\createechange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|solutionrelative:createechange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|c:\\itu\\m2\\tpt\\app\\troque\\mbds10-clientlourd-1254-1297-1301-1325\\troque\\createechange.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|solutionrelative:createechange.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|c:\\itu\\m2\\tpt\\app\\troque\\mbds10-clientlourd-1254-1297-1301-1325\\troque\\createechange.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|solutionrelative:createechange.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\api\\productapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|solutionrelative:api\\productapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\api\\authentification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|solutionrelative:api\\authentification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\echangecard.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
       "RelativeMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|solutionrelative:echangecard.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|c:\\itu\\m2\\tpt\\app\\troque\\mbds10-clientlourd-1254-1297-1301-1325\\troque\\model\\exchange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\model\\exchange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88BEA939-1E05-461D-B5AF-EBF7E39F774E}|Troque.csproj|solutionrelative:model\\exchange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -82,7 +98,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
@@ -92,7 +108,7 @@
               "RelativeDocumentMoniker": "Api\\ExchangeApi.cs",
               "ToolTip": "C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\Api\\ExchangeApi.cs",
               "RelativeToolTip": "Api\\ExchangeApi.cs",
-              "ViewState": "AQIAAIoAAAAAAAAAAAAiwLIAAAArAAAA",
+              "ViewState": "AQIAAIYAAAAAAAAAAAArwKoAAABUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-22T05:11:05.353Z",
               "IsPinned": true,
@@ -100,7 +116,57 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
+              "Title": "CreateEchange.cs",
+              "DocumentMoniker": "C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\CreateEchange.cs",
+              "RelativeDocumentMoniker": "CreateEchange.cs",
+              "ToolTip": "C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\CreateEchange.cs",
+              "RelativeToolTip": "CreateEchange.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAIA/wBYAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-24T11:52:17.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CreateEchange.resx",
+              "DocumentMoniker": "C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\CreateEchange.resx",
+              "RelativeDocumentMoniker": "CreateEchange.resx",
+              "ToolTip": "C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\CreateEchange.resx",
+              "RelativeToolTip": "CreateEchange.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-08-24T11:51:59.252Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CreateEchange.Designer.cs",
+              "DocumentMoniker": "C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\CreateEchange.Designer.cs",
+              "RelativeDocumentMoniker": "CreateEchange.Designer.cs",
+              "ToolTip": "C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\CreateEchange.Designer.cs",
+              "RelativeToolTip": "CreateEchange.Designer.cs",
+              "ViewState": "AQIAAJYAAAAAAAAAAAAwwKQAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-24T11:51:55.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CreateEchange.cs [Design]",
+              "DocumentMoniker": "C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\CreateEchange.cs",
+              "RelativeDocumentMoniker": "CreateEchange.cs",
+              "ToolTip": "C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\CreateEchange.cs [Design]",
+              "RelativeToolTip": "CreateEchange.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-24T11:47:28.266Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "ProductApi.cs",
               "DocumentMoniker": "C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\Api\\ProductApi.cs",
               "RelativeDocumentMoniker": "Api\\ProductApi.cs",
@@ -108,12 +174,11 @@
               "RelativeToolTip": "Api\\ProductApi.cs",
               "ViewState": "AQIAAB4AAAAAAAAAAAAowCEAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T13:24:11.774Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-22T13:24:11.774Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "Authentification.cs",
               "DocumentMoniker": "C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\Api\\Authentification.cs",
               "RelativeDocumentMoniker": "Api\\Authentification.cs",
@@ -121,51 +186,50 @@
               "RelativeToolTip": "Api\\Authentification.cs",
               "ViewState": "AQIAABcAAAAAAAAAAAAgwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T13:10:02.83Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-22T13:10:02.83Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "RatingApi.cs",
               "DocumentMoniker": "C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\Api\\RatingApi.cs",
               "RelativeDocumentMoniker": "Api\\RatingApi.cs",
               "ToolTip": "C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\Api\\RatingApi.cs",
               "RelativeToolTip": "Api\\RatingApi.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAIwBEAAAAqAAAA",
+              "ViewState": "AQIAACIAAAAAAAAAAIAwwCoAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-22T13:08:57.073Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Rating.cs",
               "DocumentMoniker": "C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\Rating.cs",
               "RelativeDocumentMoniker": "Rating.cs",
               "ToolTip": "C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\Rating.cs",
               "RelativeToolTip": "Rating.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAADgvxcAAAAJAAAA",
+              "ViewState": "AQIAABcAAAAAAAAAAIAwwCEAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-22T13:05:54.971Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "EchangeCard.cs",
               "DocumentMoniker": "C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\EchangeCard.cs",
               "RelativeDocumentMoniker": "EchangeCard.cs",
               "ToolTip": "C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\EchangeCard.cs",
               "RelativeToolTip": "EchangeCard.cs",
-              "ViewState": "AQIAAGgAAAAAAAAAAAA7wG8AAAARAAAA",
+              "ViewState": "AQIAAI0AAAAAAAAAAAAawJ0AAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-22T13:04:13.849Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "EchangeCard.resx",
               "DocumentMoniker": "C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\EchangeCard.resx",
               "RelativeDocumentMoniker": "EchangeCard.resx",
@@ -177,7 +241,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Rating.cs [Design]",
               "DocumentMoniker": "C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\Rating.cs",
               "RelativeDocumentMoniker": "Rating.cs",
@@ -189,20 +253,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
               "Title": "EchangeCard.Designer.cs",
               "DocumentMoniker": "C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\EchangeCard.Designer.cs",
               "RelativeDocumentMoniker": "EchangeCard.Designer.cs",
               "ToolTip": "C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\EchangeCard.Designer.cs",
               "RelativeToolTip": "EchangeCard.Designer.cs",
-              "ViewState": "AQIAAJAAAAAAAAAAAAAkwL4AAAA6AAAA",
+              "ViewState": "AQIAALAAAAAAAAAAAAAwwMMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-22T12:31:19.826Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "EchangeCard.cs [Design]",
               "DocumentMoniker": "C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\EchangeCard.cs",
               "RelativeDocumentMoniker": "EchangeCard.cs",
@@ -214,7 +278,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "Exchange.cs",
               "DocumentMoniker": "C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\Model\\Exchange.cs",
               "RelativeDocumentMoniker": "Model\\Exchange.cs",
@@ -227,7 +291,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "Proposition.cs",
               "DocumentMoniker": "C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\Model\\Proposition.cs",
               "RelativeDocumentMoniker": "Model\\Proposition.cs",
@@ -235,12 +299,11 @@
               "RelativeToolTip": "Model\\Proposition.cs",
               "ViewState": "AQIAABAAAAAAAAAAAIA8wBsAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T07:29:26.448Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-22T07:29:26.448Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "ListExchange.cs [Design]",
               "DocumentMoniker": "C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\ListExchange.cs",
               "RelativeDocumentMoniker": "ListExchange.cs",
@@ -252,7 +315,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "Dashboard.Designer.cs",
               "DocumentMoniker": "C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\Dashboard.Designer.cs",
               "RelativeDocumentMoniker": "Dashboard.Designer.cs",
@@ -260,12 +323,11 @@
               "RelativeToolTip": "Dashboard.Designer.cs",
               "ViewState": "AQIAACUAAAAAAAAAAAAqwC4AAABYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-21T19:22:49.62Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-21T19:22:49.62Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "CardProduit.cs",
               "DocumentMoniker": "C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\CardProduit.cs",
               "RelativeDocumentMoniker": "CardProduit.cs",
@@ -273,24 +335,22 @@
               "RelativeToolTip": "CardProduit.cs",
               "ViewState": "AQIAADIAAAAAAAAAAAApwDkAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-21T18:46:52.976Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-21T18:46:52.976Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "AjoutProduit.cs [Design]",
               "DocumentMoniker": "C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\AjoutProduit.cs",
               "RelativeDocumentMoniker": "AjoutProduit.cs",
               "ToolTip": "C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\AjoutProduit.cs [Design]",
               "RelativeToolTip": "AjoutProduit.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T06:38:00.167Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-08-16T06:38:00.167Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "Dashboard.cs",
               "DocumentMoniker": "C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\Dashboard.cs",
               "RelativeDocumentMoniker": "Dashboard.cs",
@@ -298,20 +358,18 @@
               "RelativeToolTip": "Dashboard.cs",
               "ViewState": "AQIAACcAAAAAAAAAAAAmwCQAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T06:37:40.608Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-16T06:37:40.608Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "Dashboard.cs [Design]",
               "DocumentMoniker": "C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\Dashboard.cs",
               "RelativeDocumentMoniker": "Dashboard.cs",
               "ToolTip": "C:\\ITU\\M2\\TPT\\app\\Troque\\mbds10-clientLourd-1254-1297-1301-1325\\Troque\\Dashboard.cs [Design]",
               "RelativeToolTip": "Dashboard.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T06:32:38.729Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-08-16T06:32:38.729Z"
             }
           ]
         }
