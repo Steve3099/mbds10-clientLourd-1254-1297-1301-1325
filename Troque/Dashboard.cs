@@ -37,7 +37,7 @@ namespace Troque
             this.Products = await produitapi.GetAllProductsUser();
             //listView1.Controls.Clear();
 
-            foreach (Product product in Products)
+            foreach (Product product in this.Products)
             {
                 Console.WriteLine(product.id);
                 CardProduit cardProduit = new CardProduit();
@@ -99,6 +99,16 @@ namespace Troque
         {
             ListExchange listExchange = new ListExchange();
             listExchange.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AuthTokenManager.AccessToken = "";
+            AuthTokenManager.id = 0;
+            this.Close();
+            Form1 form1 = new Form1();
+            form1.Show();
+            
         }
     }
 }

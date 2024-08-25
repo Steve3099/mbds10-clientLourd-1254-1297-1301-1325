@@ -75,5 +75,38 @@ namespace Troque.Api
                 return null;
             }
         }
+
+        //inscription
+        public async Task<bool> Inscription(string username, string email, string password, string address)
+        {
+            var inscriptionData = new
+            {
+                username = username,
+                email = email,
+                password = password,
+                address = address,
+                role = "USER"
+            };
+
+            var json = Newtonsoft.Json.JsonConvert.SerializeObject(inscriptionData);
+            var data = new StringContent(json, Encoding.UTF8, "application/json");
+
+            try
+            {
+                client.DefaultRequestHeaders.Clear();
+                string baseUrl = ConfigurationManager.AppSettings["ApiBaseUrl"];
+                HttpResponseMessage response = await client.PostAsync(baseUrl + "/auth/register", data);
+                response.EnsureSuccessStatusCode();
+
+                // Optionally, handle the response content here (e.g., JWT token, user data)
+                var responseContent = await response.Content.ReadAsStringAsync();
+                return true;
+            }
+            catch (HttpRequestException ex)
+            {
+                MessageBox.Show($"Request error: {ex.Message}");
+                return false;
+            }
+        }
     }
 }

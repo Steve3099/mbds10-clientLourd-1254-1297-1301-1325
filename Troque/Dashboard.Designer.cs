@@ -30,9 +30,10 @@
         {
             this.btAddProduct = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.listeEchangebutton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.listeEchangebutton = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,6 +49,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.listeEchangebutton);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -55,14 +57,28 @@
             this.panel1.Size = new System.Drawing.Size(238, 295);
             this.panel1.TabIndex = 0;
             // 
+            // listeEchangebutton
+            // 
+            this.listeEchangebutton.BackColor = System.Drawing.Color.RoyalBlue;
+            this.listeEchangebutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listeEchangebutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.listeEchangebutton.Location = new System.Drawing.Point(39, 109);
+            this.listeEchangebutton.Name = "listeEchangebutton";
+            this.listeEchangebutton.Size = new System.Drawing.Size(155, 51);
+            this.listeEchangebutton.TabIndex = 1;
+            this.listeEchangebutton.Text = "Liste de mes echanges ";
+            this.listeEchangebutton.UseVisualStyleBackColor = false;
+            this.listeEchangebutton.Click += new System.EventHandler(this.listeEchangebutton_Click);
+            // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button1.Location = new System.Drawing.Point(36, 25);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(159, 45);
             this.button1.TabIndex = 0;
             this.button1.Text = "Ajouter Produit\r\n";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // flowLayoutPanel1
@@ -75,15 +91,18 @@
             this.flowLayoutPanel1.TabIndex = 1;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
-            // listeEchangebutton
+            // button2
             // 
-            this.listeEchangebutton.Location = new System.Drawing.Point(39, 109);
-            this.listeEchangebutton.Name = "listeEchangebutton";
-            this.listeEchangebutton.Size = new System.Drawing.Size(155, 51);
-            this.listeEchangebutton.TabIndex = 1;
-            this.listeEchangebutton.Text = "Liste de mes echanges ";
-            this.listeEchangebutton.UseVisualStyleBackColor = true;
-            this.listeEchangebutton.Click += new System.EventHandler(this.listeEchangebutton_Click);
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Location = new System.Drawing.Point(38, 202);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(156, 53);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "logout";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Dashboard
             // 
@@ -109,5 +128,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button listeEchangebutton;
+        private System.Windows.Forms.Button button2;
     }
 }

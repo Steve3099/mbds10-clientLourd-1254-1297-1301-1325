@@ -40,7 +40,12 @@ namespace Troque
             else {      
                 MessageBox.Show("Erreur lors de l'enregistrement de votre avis");
             }
-            this.Close();
+            //this.Close();
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
     }

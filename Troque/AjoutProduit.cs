@@ -24,18 +24,6 @@ namespace Troque
             //categories = ;
             //categories = categoryApi.GetCategories();
         }
-
-        public AjoutProduit(List<Category> categories)
-        {
-            InitializeComponent();
-            this.categories = categories;
-            foreach (Category category in categories)
-            {
-
-                this.comboBoxCategory.Items.Add(category.Category_name);
-                
-            }
-        }
         
 
         private async void button1_Click(object sender, EventArgs e)
