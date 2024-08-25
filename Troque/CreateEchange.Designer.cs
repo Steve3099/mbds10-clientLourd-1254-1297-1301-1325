@@ -30,7 +30,7 @@
         {
             this.flowLayoutPanelHe = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelOtherUser = new System.Windows.Forms.Label();
             this.flowLayoutPanelMe = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.Deliveryaddress = new System.Windows.Forms.TextBox();
@@ -42,6 +42,7 @@
             // 
             // flowLayoutPanelHe
             // 
+            this.flowLayoutPanelHe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.flowLayoutPanelHe.AutoScroll = true;
             this.flowLayoutPanelHe.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanelHe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -62,19 +63,20 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Mes Produits";
             // 
-            // label2
+            // labelOtherUser
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(743, 61);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 28);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Les Produits de";
+            this.labelOtherUser.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelOtherUser.AutoSize = true;
+            this.labelOtherUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelOtherUser.Location = new System.Drawing.Point(743, 61);
+            this.labelOtherUser.Name = "labelOtherUser";
+            this.labelOtherUser.Size = new System.Drawing.Size(156, 28);
+            this.labelOtherUser.TabIndex = 3;
+            this.labelOtherUser.Text = "Les Produits de";
             // 
             // flowLayoutPanelMe
             // 
+            this.flowLayoutPanelMe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.flowLayoutPanelMe.AutoScroll = true;
             this.flowLayoutPanelMe.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanelMe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -86,6 +88,7 @@
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button1.BackColor = System.Drawing.Color.CornflowerBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -145,7 +148,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.flowLayoutPanelMe);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelOtherUser);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.flowLayoutPanelHe);
             this.Controls.Add(this.panelHeader);
@@ -164,7 +167,7 @@
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelHe;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelOtherUser;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelMe;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox Deliveryaddress;

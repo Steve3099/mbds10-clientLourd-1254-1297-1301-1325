@@ -68,8 +68,15 @@ namespace Troque
             this.HisProducts = await produitapi.GetProductsUser(userId);
             //listView1.Controls.Clear();
             //Console.WriteLine(MyProducts.Count);
+            int i = 0;
             foreach (Product product in HisProducts)
             {
+                if (i == 0)
+                {
+                    this.labelOtherUser.Text = "Produits de " + product.actual_owner.Username;
+                    i++;
+                }
+                
                 CardProduit cardProduit = new CardProduit();
                 cardProduit.idProduit = product.id;
                 cardProduit.nomProduit = product.product_name;

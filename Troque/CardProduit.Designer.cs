@@ -40,6 +40,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.Details = new System.Windows.Forms.Button();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            this.buttonMesProduits = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -119,6 +120,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel2.Controls.Add(this.buttonMesProduits);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.Details);
             this.panel2.Controls.Add(this.labelcategorie);
@@ -140,13 +142,24 @@
             // 
             // Details
             // 
-            this.Details.Location = new System.Drawing.Point(468, 68);
+            this.Details.Location = new System.Drawing.Point(441, 68);
             this.Details.Name = "Details";
-            this.Details.Size = new System.Drawing.Size(75, 42);
+            this.Details.Size = new System.Drawing.Size(102, 42);
             this.Details.TabIndex = 6;
             this.Details.Text = "+ de produits";
             this.Details.UseVisualStyleBackColor = true;
             this.Details.Click += new System.EventHandler(this.Details_Click);
+            // 
+            // buttonMesProduits
+            // 
+            this.buttonMesProduits.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.buttonMesProduits.Location = new System.Drawing.Point(441, 15);
+            this.buttonMesProduits.Name = "buttonMesProduits";
+            this.buttonMesProduits.Size = new System.Drawing.Size(101, 42);
+            this.buttonMesProduits.TabIndex = 8;
+            this.buttonMesProduits.Text = "Mes Produits";
+            this.buttonMesProduits.UseVisualStyleBackColor = false;
+            this.buttonMesProduits.Click += new System.EventHandler(this.buttonMesProduits_Click);
             // 
             // CardProduit
             // 
@@ -178,5 +191,6 @@
         private System.Windows.Forms.Button button1;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         public System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button buttonMesProduits;
     }
 }

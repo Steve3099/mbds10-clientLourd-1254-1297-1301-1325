@@ -8,6 +8,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Troque.Model;
 
 namespace Troque
 {
@@ -37,7 +38,14 @@ namespace Troque
         private void CardProduit_Load(object sender, EventArgs e)
         {
             LoadImageAsync(_imageUrl);
-
+            if(userId == AuthTokenManager.id)
+            {
+                this.Details.Visible = false;
+            }
+            else
+            {
+                this.buttonMesProduits.Visible = false;
+            }
         }
 
         private void nomProduit_Click(object sender, EventArgs e)
@@ -121,6 +129,11 @@ namespace Troque
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonMesProduits_Click(object sender, EventArgs e)
         {
 
         }
