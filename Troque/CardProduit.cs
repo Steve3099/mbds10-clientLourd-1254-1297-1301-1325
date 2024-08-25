@@ -8,6 +8,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Troque.Api;
 using Troque.Model;
 
 namespace Troque
@@ -133,9 +134,13 @@ namespace Troque
 
         }
 
-        private void buttonMesProduits_Click(object sender, EventArgs e)
+        private async void buttonMesProduits_Click(object sender, EventArgs e)
         {
-
+            int i = this.idProduit;
+            ProductApi productApi = new ProductApi();
+            Product product = await productApi.GetOneProduct(i);
+            UpdatePRoduit updatePRoduit = new UpdatePRoduit(product);
+            updatePRoduit.ShowDialog();
         }
     }
 }

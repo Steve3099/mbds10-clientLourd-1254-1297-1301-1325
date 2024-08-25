@@ -31,7 +31,7 @@ namespace Troque
 
         private void controlOwnership()
         {
-            if(this.exchange.matchType == "OWNER")
+            if(this.exchange.matchType == "TAKER")
             {
                 this.buttonAccepter.Visible = false;
                 this.buttonRefuser.Visible = false;

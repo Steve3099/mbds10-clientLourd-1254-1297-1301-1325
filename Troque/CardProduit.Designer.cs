@@ -37,10 +37,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.buttonMesProduits = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.Details = new System.Windows.Forms.Button();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
-            this.buttonMesProduits = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -131,6 +131,17 @@
             this.panel2.Size = new System.Drawing.Size(557, 121);
             this.panel2.TabIndex = 5;
             // 
+            // buttonMesProduits
+            // 
+            this.buttonMesProduits.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.buttonMesProduits.Location = new System.Drawing.Point(441, 15);
+            this.buttonMesProduits.Name = "buttonMesProduits";
+            this.buttonMesProduits.Size = new System.Drawing.Size(101, 42);
+            this.buttonMesProduits.TabIndex = 8;
+            this.buttonMesProduits.Text = "Edit";
+            this.buttonMesProduits.UseVisualStyleBackColor = false;
+            this.buttonMesProduits.Click += new System.EventHandler(this.buttonMesProduits_Click);
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(395, 68);
@@ -149,17 +160,6 @@
             this.Details.Text = "+ de produits";
             this.Details.UseVisualStyleBackColor = true;
             this.Details.Click += new System.EventHandler(this.Details_Click);
-            // 
-            // buttonMesProduits
-            // 
-            this.buttonMesProduits.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.buttonMesProduits.Location = new System.Drawing.Point(441, 15);
-            this.buttonMesProduits.Name = "buttonMesProduits";
-            this.buttonMesProduits.Size = new System.Drawing.Size(101, 42);
-            this.buttonMesProduits.TabIndex = 8;
-            this.buttonMesProduits.Text = "Mes Produits";
-            this.buttonMesProduits.UseVisualStyleBackColor = false;
-            this.buttonMesProduits.Click += new System.EventHandler(this.buttonMesProduits_Click);
             // 
             // CardProduit
             // 

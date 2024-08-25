@@ -124,7 +124,7 @@ namespace Troque
             try
             {
                 ExchangeApi exchangeApi = new ExchangeApi();
-                Exchange result = await exchangeApi.Exchangeproduit(deliveryadress, myProducts, hisProducts, AuthTokenManager.id, this.idOtherUser);
+                Exchange result = await exchangeApi.Exchangeproduit(deliveryadress, hisProducts, myProducts, this.idOtherUser, AuthTokenManager.id);
                 if (result != null)
                 {
                     MessageBox.Show("Echange effectué avec succès");

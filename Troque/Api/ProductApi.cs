@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Troque.Model;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace Troque.Api
 {
@@ -96,8 +97,8 @@ namespace Troque.Api
                 HttpResponseMessage response = await client.GetAsync(baseUrl + "/products/" + id);
                 response.EnsureSuccessStatusCode();
                 var responseContent = await response.Content.ReadAsStringAsync();
-                var product = Newtonsoft.Json.JsonConvert.DeserializeObject<Product>(responseContent);
-                return product;
+                var product = Newtonsoft.Json.JsonConvert.DeserializeObject<ProductInsertResponse>(responseContent);
+                return product.Data;
             }
             catch (Exception e)
             {
@@ -207,6 +208,43 @@ namespace Troque.Api
                 MessageBox.Show(e.Message);
                 return false;
             }
+        }
+
+        internal async Task<Product> UpdateProduct(int id, string name, string desc, List<int> selectedCategoryIds)
+        {
+            var productData = new
+            {
+                product_name = name,
+                description = desc,
+                categories = selectedCategoryIds.ToArray()
+            };
+
+            var json = Newtonsoft.Json.JsonConvert.SerializeObject(productData);
+            var data = new StringContent(json, Encoding.UTF8, "application/json");
+            string contentString = await data.ReadAsStringAsync();
+            try
+            {
+                string baseUrl = ConfigurationManager.AppSettings["ApiBaseUrl"];
+                string accessToken = AuthTokenManager.AccessToken;
+                if (string.IsNullOrEmpty(accessToken))
+                {
+                    throw new InvalidOperationException("Access token is missing.");
+                }
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Add("x-auth-token", accessToken);
+                HttpResponseMessage response = await client.PutAsync(baseUrl + "/products/"+id, data);
+                string responseContent = await response.Content.ReadAsStringAsync();
+                var product = Newtonsoft.Json.JsonConvert.DeserializeObject<ProductInsertResponse>(responseContent);
+
+                response.EnsureSuccessStatusCode();
+                return product.Data;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return null;
+            }
+
         }
     }
 }

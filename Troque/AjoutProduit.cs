@@ -20,9 +20,6 @@ namespace Troque
             InitializeComponent();
             CategoryApi categoryApi = new CategoryApi();
             loadCategories();
-            //categoryApi.GetCategories();
-            //categories = ;
-            //categories = categoryApi.GetCategories();
         }
         
 
@@ -31,14 +28,6 @@ namespace Troque
             string desc = this.richTextBoxDescription.Text;
             string name = this.textBoxNomProduit.Text;
             Image image = this.pictureBoxImage.Image;
-            //int selectedCategoryId = -1;
-            /*if (this.comboBoxCategory.SelectedItem is Category selectedCategory)
-            {
-                selectedCategoryId = selectedCategory.Id;
-                MessageBox.Show($"Selected Category ID: {selectedCategoryId}");
-
-                // Use the selectedCategoryId as needed
-            }*/
 
             List<int> selectedCategoryIds = new List<int>();
 
@@ -47,12 +36,6 @@ namespace Troque
                 Console.WriteLine(category.Id);
                 selectedCategoryIds.Add(category.Id); // Assuming Category_id is the ID property
             }
-
-            /*if (string.IsNullOrEmpty(desc) || string.IsNullOrEmpty(name) || selectedCategoryId == -1)
-            {
-                MessageBox.Show("Please fill all fields");
-                return;
-            }*/
             ProductApi productApi = new ProductApi();
             try
             {
@@ -74,21 +57,13 @@ namespace Troque
             {
                 MessageBox.Show(ex.Message);
             }
-            
-            
-            
         }
 
         private async void loadCategories()
         {
             CategoryApi categoryApi = new CategoryApi();
             categories = await categoryApi.GetCategories();
-            //this.comboBoxCategory.Items.AddRange(categories.ToArray());
             this.checkedListBoxCategory.Items.AddRange(categories.ToArray());
-            /*foreach (Category category in categories)
-            {
-                this.comboBoxCategory.Items.Add(category.Category_name + " " +category.Category_name);
-            }*/
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -151,6 +126,11 @@ namespace Troque
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AjoutProduit_Load(object sender, EventArgs e)
         {
 
         }
