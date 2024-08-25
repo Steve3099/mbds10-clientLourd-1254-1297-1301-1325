@@ -30,6 +30,7 @@ namespace Troque
         {
             string desc = this.richTextBoxDescription.Text;
             string name = this.textBoxNomProduit.Text;
+            Image image = this.pictureBoxImage.Image;
             //int selectedCategoryId = -1;
             /*if (this.comboBoxCategory.SelectedItem is Category selectedCategory)
             {
@@ -53,18 +54,29 @@ namespace Troque
                 return;
             }*/
             ProductApi productApi = new ProductApi();
-            Console.WriteLine(selectedCategoryIds);
-            bool result = await productApi.AddProduct(name, desc, selectedCategoryIds);
-            if (result)
+            try
             {
-                MessageBox.Show("Product added successfully");
-                this.Close();
+                
+                Product result = await productApi.AddProduct(name, desc, selectedCategoryIds);
+                bool resu = await productApi.UploadImage(result.id, image);
+                if (result!=null && resu)
+                {
+                    MessageBox.Show("Product added successfully");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to add product");
+                }
+
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Failed to add product");
+                MessageBox.Show(ex.Message);
             }
-            Product product = new Product();
+            
+            
+            
         }
 
         private async void loadCategories()
@@ -77,6 +89,70 @@ namespace Troque
             {
                 this.comboBoxCategory.Items.Add(category.Category_name + " " +category.Category_name);
             }*/
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.InitialDirectory = "C:\\";
+                openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
+                openFileDialog.Title = "Select an Image";
+
+                // Show the dialog and check if the user selected a file
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    // Get the selected file's path
+                    string selectedFilePath = openFileDialog.FileName;
+
+                    // Load the image from the file
+                    Image originalImage = Image.FromFile(selectedFilePath);
+
+                    // Resize the image to fit the PictureBox dimensions
+                    Image resizedImage = ResizeImageToFitPictureBox(originalImage, pictureBoxImage.Width, pictureBoxImage.Height);
+
+                    // Set the resized image to the PictureBox
+                    pictureBoxImage.Image = resizedImage;
+                }
+            }
+        }
+
+        private Image ResizeImageToFitPictureBox(Image image, int width, int height)
+        {
+            // Create a new Bitmap with the same dimensions as the PictureBox
+            Bitmap resizedBitmap = new Bitmap(width, height);
+
+            // Use Graphics to draw the original image onto the new Bitmap, resizing it
+            using (Graphics graphics = Graphics.FromImage(resizedBitmap))
+            {
+                // Set the interpolation mode for high quality resizing
+                graphics.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+
+                // Draw the original image onto the new Bitmap at the specified size
+                graphics.DrawImage(image, 0, 0, width, height);
+            }
+
+            return resizedBitmap;
+        }
+
+        private void checkedListBoxCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBoxDescription_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

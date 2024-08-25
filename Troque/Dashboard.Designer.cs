@@ -64,7 +64,7 @@
             this.listeEchangebutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.listeEchangebutton.Location = new System.Drawing.Point(39, 109);
             this.listeEchangebutton.Name = "listeEchangebutton";
-            this.listeEchangebutton.Size = new System.Drawing.Size(155, 51);
+            this.listeEchangebutton.Size = new System.Drawing.Size(155, 61);
             this.listeEchangebutton.TabIndex = 1;
             this.listeEchangebutton.Text = "Liste de mes echanges ";
             this.listeEchangebutton.UseVisualStyleBackColor = false;

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Drawing;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -25,11 +26,26 @@ namespace Troque.Api
         [JsonProperty("data")]
         public List<Product> Data { get; set; }
     }
+
+    public class ProductInsertResponse
+    {
+        [JsonProperty("code")]
+        public int Code { get; set; }
+
+        [JsonProperty("status")]
+        public string Status { get; set; }
+
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("data")]
+        public Product Data { get; set; }
+    }
     public class ProductApi
     {
         private static readonly HttpClient client = new HttpClient();
 
-        public async Task<bool> AddProduct(string product_name, string description, List<int> categ)
+        public async Task<Product> AddProduct(string product_name, string description, List<int> categ)
         {
             var productData = new
             {
@@ -53,14 +69,15 @@ namespace Troque.Api
                 client.DefaultRequestHeaders.Add("x-auth-token", accessToken);
                 HttpResponseMessage response = await client.PostAsync(baseUrl + "/products", data);
                 string responseContent = await response.Content.ReadAsStringAsync();
+                var product = Newtonsoft.Json.JsonConvert.DeserializeObject<ProductInsertResponse>(responseContent);
 
                 response.EnsureSuccessStatusCode();
-                return true;
+                return product.Data;
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
-                return false;
+                return null;
             }
         }
 
@@ -161,6 +178,34 @@ namespace Troque.Api
             {
                 MessageBox.Show(e.Message);
                 return null;
+            }
+        }
+
+        //upload image us id and image
+        public async Task<bool> UploadImage(int id, Image image)
+        {
+            try
+            {
+                string baseUrl = ConfigurationManager.AppSettings["ApiBaseUrl"];
+                string accessToken = AuthTokenManager.AccessToken;
+                if (string.IsNullOrEmpty(accessToken))
+                {
+                    throw new InvalidOperationException("Access token is missing.");
+                }
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Add("x-auth-token", accessToken);
+                MultipartFormDataContent form = new MultipartFormDataContent();
+                ImageConverter converter = new ImageConverter();
+                byte[] imageBytes = (byte[])converter.ConvertTo(image, typeof(byte[]));
+                form.Add(new ByteArrayContent(imageBytes, 0, imageBytes.Length), "file", "image.jpg");
+                HttpResponseMessage response = await client.PostAsync(baseUrl + "/products/uploadImage/" + id, form);
+                response.EnsureSuccessStatusCode();
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return false;
             }
         }
     }
