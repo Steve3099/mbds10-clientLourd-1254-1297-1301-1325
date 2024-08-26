@@ -28,22 +28,29 @@ namespace Troque
         {
             string email = this.textBoxemail.Text;
             string password = this.textBoxPassword.Text;
-
-            var auth = new Api.Authentification();
-            User success = await auth.Login(email, password);
-            if (success != null)
+            try
             {
-                AuthTokenManager.Instance.AccessToken = success.Password;
-                this.Hide();
-                Dashboard dashboard = new Dashboard();
-                dashboard.ShowDialog();
-                MessageBox.Show("Login success");
+                var auth = new Api.Authentification();
+                User success = await auth.Login(email, password);
+                if (success != null)
+                {
+                    //AuthTokenManager.AccessToken = success.Password;
+                    this.Hide();
+                    Dashboard dashboard = new Dashboard();
+                    dashboard.ShowDialog();
+                    //MessageBox.Show("Login success");
+                }
+                else
+                {
+                    MessageBox.Show("Login failed");
+                }
             }
-            else
+            catch(Exception ex)
             {
+                this.Error.Visible = true;
                 MessageBox.Show("Login failed");
             }
-            Console.Write(success);
+            
         }
 
         private void inscription_Click(object sender, EventArgs e)
@@ -55,6 +62,26 @@ namespace Troque
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void groupBoxLogin_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Login_MouseEnter(object sender, EventArgs e)
+        {
+            this.Login.ForeColor = Color.Black;
+        }
+
+        private void Login_MouseLeave(object sender, EventArgs e)
+        {
+            this.Login.ForeColor = Color.White;
         }
     }
 }

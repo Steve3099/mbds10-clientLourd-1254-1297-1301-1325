@@ -14,9 +14,11 @@ namespace Troque.Model
         public int owner_proposition_id { get; set; }
         public Proposition owner_proposition { get; set; }
         public int taker_proposition_id { get; set; }
+        public Proposition taker_proposition { get; set; }
         public DateTime creation_date { get; set; }
         public DateTime updating_date { get; set; }
         public string delivery_address { get; set; }
+        public string matchType { get; set; }
 
         public Exchange()
         {

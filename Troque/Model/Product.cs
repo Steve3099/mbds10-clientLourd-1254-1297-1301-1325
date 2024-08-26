@@ -18,8 +18,9 @@ namespace Troque.Model
         public User first_owner { get; set; }
         public int actual_owner_id { get; set; }
         public User actual_owner { get; set; }
-        public DateTime creation_date { get; set; }
-        public DateTime updating_date { get; set; }
+        public DateTime createdAt { get; set; }
+        public DateTime updatedAt { get; set; }
+        public List<Category> categories { get; set; }
 
         public Product()
         {
@@ -35,8 +36,8 @@ namespace Troque.Model
             this.is_deleted = is_deleted;
             this.first_owner_id = first_owner_id;
             this.actual_owner_id = actual_owner_id;
-            this.creation_date = creation_date;
-            this.updating_date = updating_date;
+            this.createdAt = creation_date;
+            this.updatedAt = updating_date;
         }
     }
 }
