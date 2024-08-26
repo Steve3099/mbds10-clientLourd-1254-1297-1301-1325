@@ -30,18 +30,19 @@ namespace Troque
                 MessageBox.Show("Veuillez donner une note");
                 return;
             }
-            Console.WriteLine(userId);
             RatingApi ratingApi = new RatingApi();
             bool result = await ratingApi.sendRating(userId, desc, rating);
             //verif result
             if (result)
             {
                 MessageBox.Show("Votre avis a été enregistré");
+                this.Close();
             }
             else {      
                 MessageBox.Show("Erreur lors de l'enregistrement de votre avis");
+
             }
-            //this.Close();
+            
 
         }
 
@@ -54,6 +55,11 @@ namespace Troque
         {
             this.numericUpDown1.Minimum = 0;
             this.numericUpDown1.Maximum = 5;
+
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
 
         }
     }

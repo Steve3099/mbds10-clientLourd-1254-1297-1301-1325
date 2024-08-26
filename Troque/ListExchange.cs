@@ -25,7 +25,6 @@ namespace Troque
             ExchangeApi exchangeApi = new ExchangeApi();
             listExchange = await exchangeApi.GetMyExchange();
             //this.flowLayoutPanel1.Controls.Clear();
-            Console.WriteLine(listExchange.Count);
             foreach(Exchange exchange in listExchange)
             {
                 EchangeCard cardExchange = new EchangeCard(exchange);

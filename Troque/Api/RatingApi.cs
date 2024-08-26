@@ -23,7 +23,7 @@ namespace Troque.Api
                 review = review,
                 rating = rating
             };
-
+            MessageBox.Show(productData.ToString());
             var json = Newtonsoft.Json.JsonConvert.SerializeObject(productData);
             var data = new StringContent(json, Encoding.UTF8, "application/json");
             Console.WriteLine(data.ReadAsStringAsync().ToString());

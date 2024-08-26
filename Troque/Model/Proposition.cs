@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,8 @@ namespace Troque.Model
     public class Proposition
     {
         public int Id { get; set; }
+
+        [JsonProperty("user_id")]
         public int User_id { get; set; }
         public User User { get; set; }
         public DateTime createdAt { get; set; }

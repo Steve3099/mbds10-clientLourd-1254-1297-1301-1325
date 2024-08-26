@@ -143,25 +143,22 @@ namespace Troque
             ExchangeApi exchangeApi = new ExchangeApi();
             try
             {
+
+
                 var res = await exchangeApi.ReceiveExchange(exchange.id);
                 if (res == true)
                 {
-
                     Rating rating = null;
-                    Console.WriteLine("here----------------------------------");
-                    if (exchange.taker_proposition.User.Id == AuthTokenManager.id)
-                    {
-                        rating = new Rating(exchange.owner_proposition_id);
-                        rating.userId = exchange.owner_proposition.User.Id;
-                    }
-                    else
-                    {
-                        rating = new Rating(exchange.taker_proposition_id);
-                        rating.userId = exchange.taker_proposition.User.Id;
-                    }
-                    Console.WriteLine(exchange.owner_proposition.User.Id);
-                    Console.WriteLine(exchange.taker_proposition.User.Id);
-                    
+                if (exchange.taker_proposition.User.Id == AuthTokenManager.id)
+                {
+                    rating = new Rating(exchange.owner_proposition.User.Id);
+                    rating.userId = exchange.owner_proposition.User_id;
+                }
+                else
+                {
+                    rating = new Rating(exchange.taker_proposition.User.Id);
+                    rating.userId = exchange.taker_proposition.User_id;
+                }
                     rating.ShowDialog();
                     ListExchange parentForm = this.FindForm() as ListExchange;
                     parentForm?.RefreshExchanges();
