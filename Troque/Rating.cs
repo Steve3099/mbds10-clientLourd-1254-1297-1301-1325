@@ -13,23 +13,24 @@ namespace Troque
 {
     public partial class Rating : Form
     {
-        public Rating()
+        public int userId { get; set; }
+        public Rating(int id)
         {
+            userId = id;
             InitializeComponent();
         }
-
-        public int userId { get; set; }
 
         private async void button1_Click(object sender, EventArgs e)
         {
             string desc = this.Commentaire.Text;
-            double rating = this.ratingControl1.Value;
-
+            double rating = (double)this.numericUpDown1.Value;
+            
             if (rating == 0)
             {
                 MessageBox.Show("Veuillez donner une note");
                 return;
             }
+            Console.WriteLine(userId);
             RatingApi ratingApi = new RatingApi();
             bool result = await ratingApi.sendRating(userId, desc, rating);
             //verif result
@@ -46,6 +47,13 @@ namespace Troque
 
         private void label1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void Rating_Load(object sender, EventArgs e)
+        {
+            this.numericUpDown1.Minimum = 0;
+            this.numericUpDown1.Maximum = 5;
 
         }
     }

@@ -109,7 +109,7 @@
             // checkBox1
             // 
             this.checkBox1.BackColor = System.Drawing.Color.Honeydew;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.Location = new System.Drawing.Point(15, 20);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(18, 25);
@@ -157,7 +157,7 @@
             this.Details.Name = "Details";
             this.Details.Size = new System.Drawing.Size(102, 42);
             this.Details.TabIndex = 6;
-            this.Details.Text = "+ de produits";
+            this.Details.Text = "Proposer echange";
             this.Details.UseVisualStyleBackColor = true;
             this.Details.Click += new System.EventHandler(this.Details_Click);
             // 

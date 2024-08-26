@@ -26,6 +26,7 @@ namespace Troque.Api
 
             var json = Newtonsoft.Json.JsonConvert.SerializeObject(productData);
             var data = new StringContent(json, Encoding.UTF8, "application/json");
+            Console.WriteLine(data.ReadAsStringAsync().ToString());
             try
             {
                 string baseUrl = ConfigurationManager.AppSettings["ApiBaseUrl"];
@@ -38,7 +39,7 @@ namespace Troque.Api
                 client.DefaultRequestHeaders.Add("x-auth-token", accessToken);
                 HttpResponseMessage response = await client.PostAsync(baseUrl + "/users/rate", data);
                 string responseContent = await response.Content.ReadAsStringAsync();
-
+                Console.WriteLine(responseContent);
                 response.EnsureSuccessStatusCode();
                 Console.WriteLine(responseContent);
                 return true;

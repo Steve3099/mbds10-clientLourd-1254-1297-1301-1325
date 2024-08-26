@@ -71,7 +71,8 @@ namespace Troque.Api
             }
             catch (HttpRequestException ex)
             {
-                MessageBox.Show($"Request error: {ex.Message}");
+                //MessageBox.Show($"Request error: {ex.Message}");
+                throw ex;
                 return null;
             }
         }

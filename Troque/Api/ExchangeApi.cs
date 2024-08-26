@@ -9,6 +9,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 using System.Windows.Forms;
 using Troque.Model;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Troque.Api
 {
@@ -64,7 +65,6 @@ namespace Troque.Api
             var json = Newtonsoft.Json.JsonConvert.SerializeObject(productData);
             var data = new StringContent(json, Encoding.UTF8, "application/json");
             string contentString = await data.ReadAsStringAsync();
-            Console.WriteLine(contentString);
             try
             {
                 string baseUrl = ConfigurationManager.AppSettings["ApiBaseUrl"];
@@ -149,7 +149,13 @@ namespace Troque.Api
             {
 
                 var (latitude, longitude) = (10.5,10.4);
-
+                double[] loaclisation = await GetLocationAsync();
+                if (loaclisation != null)
+                {
+                    latitude = loaclisation[0];
+                    longitude = loaclisation[1];
+                }
+                
                 // Set up the request body with location data
                 var locationData = new
                 {
@@ -180,7 +186,41 @@ namespace Troque.Api
             }
         }
 
+        private async Task<double[]> GetLocationAsync()
+        {
+            string apiKey = "89ee3efff1ac6313079855a7e7e79880";  // Replace with your actual API key
+            string url = $"http://api.ipstack.com/check?access_key={apiKey}";
 
+            using (HttpClient client = new HttpClient())
+            {
+                try
+                {
+                    // Make an asynchronous request to the API
+                    HttpResponseMessage response = await client.GetAsync(url);
+                    response.EnsureSuccessStatusCode();
+
+                    // Read the response as a string
+                    string responseBody = await response.Content.ReadAsStringAsync();
+
+                    // Parse the JSON response
+                    var json = JObject.Parse(responseBody);
+
+                    // Extract latitude and longitude
+                    double latitude = (double)json["latitude"];
+                    double longitude = (double)json["longitude"];
+                    double[] localisationtions = new double[2];
+                    localisationtions[0] = latitude;
+                    localisationtions[1] = longitude;
+                    //MessageBox.Show($"Latitude: {latitude}, Longitude: {longitude}");
+                    return localisationtions;
+                }
+                catch (HttpRequestException e)
+                {
+                    MessageBox.Show("Request error: " + e.Message);
+                    return null;
+                }
+            }
+        }
 
     }
 }

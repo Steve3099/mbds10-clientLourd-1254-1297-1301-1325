@@ -41,6 +41,7 @@ namespace Troque
         private void EchangeCard_Load(object sender, EventArgs e)
         {
             //show status of exchange
+            //Console.WriteLine(exchange.owner_proposition_id);
             this.Status.Text = exchange.status;
             this.buttonrecevoir.Visible = false;
             if (exchange.status == "ACCEPTED")
@@ -146,15 +147,21 @@ namespace Troque
                 if (res == true)
                 {
 
-                    Rating rating = new Rating();
+                    Rating rating = null;
+                    Console.WriteLine("here----------------------------------");
                     if (exchange.taker_proposition.User.Id == AuthTokenManager.id)
                     {
+                        rating = new Rating(exchange.owner_proposition_id);
                         rating.userId = exchange.owner_proposition.User.Id;
                     }
                     else
                     {
+                        rating = new Rating(exchange.taker_proposition_id);
                         rating.userId = exchange.taker_proposition.User.Id;
                     }
+                    Console.WriteLine(exchange.owner_proposition.User.Id);
+                    Console.WriteLine(exchange.taker_proposition.User.Id);
+                    
                     rating.ShowDialog();
                     ListExchange parentForm = this.FindForm() as ListExchange;
                     parentForm?.RefreshExchanges();

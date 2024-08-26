@@ -28,23 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Syncfusion.Windows.Forms.Tools.CustomImageCollection customImageCollection2 = new Syncfusion.Windows.Forms.Tools.CustomImageCollection();
-            Syncfusion.Windows.Forms.Tools.ResetButton resetButton2 = new Syncfusion.Windows.Forms.Tools.ResetButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.Commentaire = new System.Windows.Forms.RichTextBox();
-            this.ratingControl1 = new Syncfusion.Windows.Forms.Tools.RatingControl();
             this.label1 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.numericUpDown1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.Commentaire);
-            this.panel1.Controls.Add(this.ratingControl1);
             this.panel1.Location = new System.Drawing.Point(43, 41);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(416, 252);
@@ -80,19 +79,6 @@
             this.Commentaire.TabIndex = 1;
             this.Commentaire.Text = "";
             // 
-            // ratingControl1
-            // 
-            this.ratingControl1.ApplyGradientColors = false;
-            this.ratingControl1.Images = customImageCollection2;
-            this.ratingControl1.Location = new System.Drawing.Point(127, 130);
-            this.ratingControl1.Name = "ratingControl1";
-            this.ratingControl1.ResetButton = resetButton2;
-            this.ratingControl1.Size = new System.Drawing.Size(185, 35);
-            this.ratingControl1.TabIndex = 0;
-            this.ratingControl1.Text = "ratingControl1";
-            this.ratingControl1.ThemeName = "Default";
-            this.ratingControl1.Value = 3F;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -105,6 +91,13 @@
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(54, 133);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(117, 22);
+            this.numericUpDown1.TabIndex = 4;
+            // 
             // Rating
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -115,8 +108,10 @@
             this.Controls.Add(this.panel1);
             this.Name = "Rating";
             this.Text = "Rating";
+            this.Load += new System.EventHandler(this.Rating_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -125,10 +120,10 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private Syncfusion.Windows.Forms.Tools.RatingControl ratingControl1;
         private System.Windows.Forms.RichTextBox Commentaire;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }
